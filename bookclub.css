@@ -1,0 +1,197 @@
+
+body {
+	min-height: 100vh;  /* need this line to 
+					tell body to fill viewport */
+	font-family: 'Montserrat', sans-serif;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	color: #4A73FF;
+     }
+
+div.overlay_base {
+    display: none; /* Start out hidden, we'll dynamically enable it later. */
+
+    /* Full-window container ... */
+    position: fixed; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* ... floating above everything else ... */
+    z-index: 2;
+
+    /* ... with partial transparency, 
+           to make everything else look greyed out */
+    background-color: rgba(0,0,0,0.5);
+
+    /* Flex options for child objects */
+    flex-direction: column;
+}
+
+div.delete{
+	text-align: right;
+}
+
+div.showBooks{
+	display: flex;
+	flex-direction:row;
+	text-align: center;
+	justify-content: space-around; 
+    align-items: stretch;
+}
+
+div.overlay_inner {
+	display: flex;
+    width: 550px;
+    height: 340px;
+    background-color: rgb(255,255,255); /* Must set the background color here, 
+				otherwise it inherits from the parent */
+    position: relative;
+}
+
+img{
+	display: flex;
+	width: 250px;
+	height: 300px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+div.slides{
+    display: flex;
+	flex-direction:row;
+	text-align: left;
+}
+
+div.divDisplay{
+	display: flex;
+    width: 550px;
+    height: 340px;
+    margin: 20px;
+    background-color: rgb(255,255,255); /* Must set the background color here, 
+				otherwise it inherits from the parent */
+    position: relative;
+}
+
+div.bookDisplay{
+	display: flex;
+	flex-direction:row;
+	text-align: left;
+	justify-content: space-around; 
+    align-items: stretch;
+}
+
+header{
+       text-align: left;
+       padding: 10px;
+	  
+}
+
+
+h1{
+   font-size: x-large;
+   font-weight: light;
+}
+
+
+main {
+     flex: 1 0 auto;  /* the sticky footer trick without the footer */
+}
+
+p.searchBook{
+	margin-left: 20%;
+	margin-right: 20%;
+	text-align: left;
+	font-size: large;
+	color:black;
+}
+
+p.or{
+	margin-top: 45px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+div.inputPart{
+	flex-direction: row;
+	display: flex;
+	padding-bottom: 25px;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+p.inputBoxTag{
+	text-align: left;
+	margin-left: 0px;
+}
+
+input{
+	width: 180px;
+	height: 25px;
+	border-style: solid;
+	border-radius: 5px;
+	font-size: medium;
+}
+
+button{
+	background-color: #4A73FF;
+	border-radius: 12px;
+	color:white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+button.deleteButton{
+	height: 34px;
+}
+div.buttonPart{
+    margin-left: 20%;
+	margin-right: 20%;
+}
+
+p.title{
+	font-size: x-large;
+	font-weight: bold;
+	margin: 10px;
+	margin-top: 50px;
+	color:black;
+	width: 250px;
+	text-align: left;
+}
+
+p.author{
+	font-size: large;
+	margin: 10px;
+	color:black;
+	width:250px;
+	text-align: left;
+}
+
+p.description{
+	font-size: medium;
+	color: black;
+	text-align: left;
+	margin: 10px;
+	margin-top: 30px;
+	width: 250px;
+	overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+
+
+

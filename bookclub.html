@@ -1,0 +1,75 @@
+<!doctype HTML>
+<html>
+<head>
+<title>Make a Book List</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="reset.css">
+<link rel="stylesheet" type="text/css" href="bookclub.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> 
+</head>
+
+<body>
+
+<div class="overlay_base" id="overlay">
+  <div class="delete">
+    <button class="overlay_button" type="button" onClick="HideOverlay();">&#x24E7;</button>
+  </div>
+
+<div class="showBooks">
+  <button type="button" onClick="showLastOne();" style="height: 40px;">&larr;</button>
+  <div class="overlay_inner" id="overlay_inner"></div>
+  <button type="button" onclick="showNextOne();" style="height: 40px;">&rarr;</button>
+</div>
+
+  <div class="keep">
+    <button type="button" onclick="keepBook()">Keep</button>
+  </div>
+</div>
+
+<header>
+<h1 class="header">BOOK CLUB</h1>
+</header>
+
+
+<main>
+<p class="searchBook">Search for a book by...</p>
+
+<div class="inputPart">
+<div class="inputBox">
+<p class="inputBoxTag">Author:</p>
+<input id="author" placeholder="ex William Shakespeare">
+</div>
+
+<p class="or">or</p>
+
+<div class="inputBox">
+<p class="inputBoxTag">Title:</p>
+<input id="title" placeholder="ex Romeo and Juliet">
+</div>
+
+<p class="or">or</p>
+
+<div class="inputbox">
+<p class="inputBoxTag">ISBN:</p>
+<input id="isbn" placeholder="ex 000-0-00-000000-0"> 
+</div>
+</div>
+
+<div class="buttonPart">
+<button onclick="newRequest()">Search</button>
+</div>
+
+<div id="bookDisplay">
+</div>
+
+</main>
+
+<!-- The Javascript for this page -->
+<script src="bookclub.js"> </script>
+
+<!-- The JSONp request -->
+<script id="dummy"></script>  
+
+</body>
+</html>
