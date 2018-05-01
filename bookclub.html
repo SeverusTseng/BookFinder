@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="reset.css">
 <link rel="stylesheet" type="text/css" href="bookclub.css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -17,23 +18,19 @@
   </div>
 
 <div class="showBooks">
-  <button type="button" onClick="showLastOne();" style="height: 40px;">&larr;</button>
+  <button type="button" id="showLastOne" onclick="showLastOne();" style="display:flex; height: 40px;">&larr;</button>
   <div class="overlay_inner" id="overlay_inner"></div>
-  <button type="button" onclick="showNextOne();" style="height: 40px;">&rarr;</button>
+  <button type="button" id="showNextOne" onclick="showNextOne();" style="display:flex; height: 40px;">&rarr;</button>
 </div>
 
   <div class="keep">
-    <button type="button" onclick="keepBook()">Keep</button>
+    <button type="button" id="keepBook" onclick="keepBook()">Keep</button>
   </div>
 </div>
 
-<header>
+<header id = "header">
 <h1 class="header">BOOK CLUB</h1>
-</header>
-
-
-<main>
-<p class="searchBook">Search for a book by...</p>
+<div class="searchBook"><p class="searchBook">Search for a book by...</p></div>
 
 <div class="inputPart">
 <div class="inputBox">
@@ -57,13 +54,21 @@
 </div>
 
 <div class="buttonPart">
-<button onclick="newRequest()">Search</button>
+<button class="buttonPart" onclick="newRequest()">Search</button>
 </div>
 
+<dir id ="a" style ="display:none;">
+	<a href ="#"><i class = "fa fa-search"></i></a>
+</dir>
+</header>
+
+
+<main id ="bookDisplayMain">
 <div id="bookDisplay">
 </div>
 
 </main>
+
 
 <!-- The Javascript for this page -->
 <script src="bookclub.js"> </script>
