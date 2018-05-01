@@ -42,7 +42,7 @@ div.showBooks{
 	flex-direction:row;
 	text-align: center;
 	justify-content: space-around; 
-    align-items: stretch;
+    align-items: center;
 }
 
 div.overlay_inner {
@@ -56,8 +56,8 @@ div.overlay_inner {
 
 img{
 	display: flex;
-	width: 250px;
-	height: 300px;
+	width: 200px;
+	height: 280px;
 	margin-left: 20px;
 	margin-top: 20px;
 }
@@ -68,72 +68,90 @@ div.slides{
 	text-align: left;
 }
 
-div.divDisplay{
-	display: flex;
-    width: 550px;
-    height: 340px;
-    margin: 20px;
-    background-color: rgb(255,255,255); /* Must set the background color here, 
-				otherwise it inherits from the parent */
-    position: relative;
-}
-
-div.bookDisplay{
+#bookDisplay{
 	display: flex;
 	flex-direction:row;
-	text-align: left;
-	justify-content: space-around; 
+	justify-content: flex-start; 
     align-items: stretch;
+    flex-wrap: wrap;
+    flex:1 0 auto;
 }
 
+div.divDisplay{
+	display: flex;
+    height: 340px;
+    width: 450px;
+    margin: 9px; /* Must set the background color here, otherwise it inherits from the parent */
+    background-color: white;
+}
+
+div.keep{
+	display: flex;
+	justify-content: center;
+}
+#keepBook{
+	padding-left: 25px;
+	padding-right: 25px;
+}
 header{
-       text-align: left;
-       padding: 10px;
-	  
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 
 h1{
    font-size: x-large;
-   font-weight: light;
+   text-align: left;
+   font-weight: bold;
 }
 
 
 main {
      flex: 1 0 auto;  /* the sticky footer trick without the footer */
+     padding: 8px;
+}
+
+div.searchBook{
+	display: flex;
+	justify-content: center;
 }
 
 p.searchBook{
-	margin-left: 20%;
-	margin-right: 20%;
+	display: flex;
 	text-align: left;
 	font-size: large;
 	color:black;
+	width: 630px;
 }
 
 p.or{
-	margin-top: 45px;
+	margin-top: 60px;
 	margin-left: 10px;
 	margin-right: 10px;
+	margin-bottom: 10px;
+	font-weight: bold;
 }
 
 div.inputPart{
-	flex-direction: row;
-	display: flex;
+    display: flex;
+    flex-direction: row;
+	justify-content: center;
+	align-items: center;
 	padding-bottom: 25px;
-	margin-left: 20%;
-	margin-right: 20%;
 }
 
 p.inputBoxTag{
 	text-align: left;
-	margin-left: 0px;
+	margin-left: 0%;
+	margin-right: 0%;
+	width:150px;
 }
 
 input{
 	width: 180px;
 	height: 25px;
-	border-style: solid;
+	border-color: #4A73FF;
 	border-radius: 5px;
 	font-size: medium;
 }
@@ -142,8 +160,8 @@ button{
 	background-color: #4A73FF;
 	border-radius: 12px;
 	color:white;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 7px;
+	padding-bottom: 7px;
 	padding-left: 20px;
 	padding-right: 20px;
 	text-align: center;
@@ -155,15 +173,16 @@ button{
 }
 
 button.deleteButton{
-	height: 34px;
-}
-div.buttonPart{
-    margin-left: 20%;
-	margin-right: 20%;
+	height: 32px;
+	width: 43px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-top: 5px;
 }
 
 p.title{
-	font-size: x-large;
+	font-size: large;
 	font-weight: bold;
 	margin: 10px;
 	margin-top: 50px;
@@ -194,4 +213,52 @@ p.description{
 }
 
 
+@media screen and (max-width: 800px){
+div.inputPart{
+	flex-direction: column;
+	display: flex;
+	padding-bottom: 25px;
+	margin-left: 20%;
+	margin-right: 20%;
+}
 
+button.buttonPart{
+    margin-left: 0px;
+	margin-right: 0px;
+	width: 190px;
+	height: 30px;
+}
+
+p.or{
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	font-weight: bold;
+}
+p.searchBook{
+	display: flex;
+	text-align: left;
+	font-size: large;
+	color:black;
+	width: 200px;
+}
+h1{
+   font-size: x-large;
+   font-weight: bold;
+   text-align: center;
+}
+
+p.inputBoxTag{
+	text-align: left;
+	margin-left: 0%;
+	margin-right: 0%;
+	width: 180px;
+}
+#bookDisplay{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+}
